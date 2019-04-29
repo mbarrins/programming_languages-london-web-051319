@@ -7,7 +7,7 @@ def reformat_languages(languages)
 				new_languages[new_language][details][:style] << style.to_s
 			else
 				new_languages[new_language][details][:style] = style.to_s
-			end 
+			end
 		end
 	end
 	new_languages
