@@ -42,8 +42,8 @@ end
 #     :javascript => {
 #       :type => "interpreted"
 #     }
-# 
+#
 #   }
 # }
-# 
+#
 # puts reformat_languages(languages)
