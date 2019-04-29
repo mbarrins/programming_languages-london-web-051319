@@ -2,10 +2,9 @@ require "pry"
 
 def reformat_languages(languages)
 	new_languages = languages.values.map {|language| language}.inject(:merge).to_h
-  styles = languages.map{|style, languages| [style, languages.keys]}.to_h
 
 	new_languages.each do |new_language, details|
-		styles.each do |new_style, language|
+		languages.map{|style, languages| [style, languages.keys]}.to_h.each do |new_style, language|
       if language.include?(new_language)
         details.has_key?(:style) ? details[:style] << new_style : details[:style] = [new_style]
       end
