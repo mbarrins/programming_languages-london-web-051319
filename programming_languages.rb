@@ -47,4 +47,4 @@ languages = {
   }
 }
 
-reformat_languages(languages)
+puts reformat_languages(languages)
