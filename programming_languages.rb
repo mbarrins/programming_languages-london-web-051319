@@ -4,8 +4,8 @@ def reformat_languages(languages)
 	new_languages = languages.values.map {|language| language}.inject(:merge).to_h
 	new_languages.each do |new_language, details|
 		languages.each do |new_style, language|
+      binding.pry
 			if details.has_key?(:style)
-        binding.pry
 				new_languages[new_language][details][:style] << new_style.to_s
 			else
 				new_languages[new_language][details][:style] = new_style.to_s
