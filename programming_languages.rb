@@ -12,3 +12,5 @@ def reformat_languages(languages)
 	end
 	new_languages
 end
+
+reformat_languages(languages)
