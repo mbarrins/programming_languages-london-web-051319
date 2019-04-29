@@ -1,3 +1,5 @@
+require "pry"
+
 def reformat_languages(languages)
 	new_languages = languages.values.map {|language| language}.inject(:merge).to_h
 	new_languages.each do |new_language, details|
