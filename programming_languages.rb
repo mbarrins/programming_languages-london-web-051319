@@ -2,6 +2,7 @@ require "pry"
 
 def reformat_languages(languages)
 	new_languages = languages.values.map {|language| language}.inject(:merge).to_h
+  styles = languages.map{|style, languages| languages.keys}
 	new_languages.each do |new_language, details|
 		languages.each do |new_style, language|
       # binding.pry
