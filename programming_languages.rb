@@ -6,7 +6,6 @@ def reformat_languages(languages)
 
 	new_languages.each do |new_language, details|
 		styles.each do |new_style, language|
-      binding.pry
       if language.include?(new_language)
         details.has_key?(:style) ? details[:style] << new_style : details[:style] = [new_style]
       end
