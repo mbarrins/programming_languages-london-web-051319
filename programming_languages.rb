@@ -7,11 +7,13 @@ def reformat_languages(languages)
 	new_languages.each do |new_language, details|
 		styles.each do |new_style, language|
       binding.pry
-			if details.has_key?(:style)
-				details[:style] << new_style
-			else
-				details[:style] = [new_style]
-			end
+      if language == new_language
+			  if details.has_key?(:style)
+          details[:style] << new_style
+			  else
+				  details[:style] = [new_style]
+  			end
+      end
 		end
 	end
 	new_languages
